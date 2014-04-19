@@ -6,14 +6,64 @@
         <title>{{ page.title }}</title>
         <meta name="viewport" content="width=device-width">
 
+        <script src="../js/jquery.min.js" type="text/javascript"></script>
+
+        <!--jquery fullpage 插件-->
+        <script src="../js/jquery.easings.min.js" type="text/javascript"></script>
+        <script src="../js/jquery.slimscroll.min.js" type="text/javascript"></script>
+        <script src="../js/jquery.fullPage.min.js" type="text/javascript"></script>
+        <link rel="stylesheet" href="../css/jquery.fullPage.css">
+
         <!-- syntax highlighting CSS -->
         <link rel="stylesheet" href="/css/syntax.css">
 
+        <link rel="stylesheet" href="/css/magic.min.css">
+
         <!-- Custom CSS -->
         <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="/css/blog.css">
+        <link rel="stylesheet" href="/css/menus.css">
+
+
+        <script src="../js/layout.js"></script>
 
     </head>
     <body>
+
+    <div id="header">
+        <div id="topbar"></div>
+        <div id="menuDiv">
+            <div id="title">
+                <h1>
+                    <a href="/">{{ site.name }}</a>
+                </h1>
+            </div>
+
+            <ul id="menu">
+                <li data-menuanchor="firstPage">
+                    <a href="#firstPage">Angular</a>
+                </li>
+                <li data-menuanchor="secondPage">
+                    <a href="#secondPage">Html</a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+
+    <div id="fullpage">
+        <div class="section " id="section0">
+            <h1>fullPage.js</h1>
+            <p>Configure the easing jQuery UI effect!</p>
+        </div>
+        <div class="section" id="section1">
+            {{ content }}
+        </div>
+        <div class="section" id="section2">
+            {{ content }}
+        </div>
+    </div>
 
         <div class="site">
           <div class="header">
