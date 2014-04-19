@@ -1,6 +1,51 @@
 @import "compass/reset"
 @import "compass"
 
+
+
+//animation-name 规定需要绑定到选择器的 keyframe 名称。。
+  animation-duration 规定完成动画所花费的时间，以秒或毫秒计。
+  animation-timing-function 规定动画的速度曲线。
+  animation-delay 规定在动画开始之前的延迟。
+  animation-iteration-count 规定动画应该播放的次数。
+  animation-direction 规定是否应该轮流反向播放动画。
+
+@mixin animations($name,$duration,$timing-function,$delay,$iteration-count,$direction)
+  +experimental('animation-name',#{$name}, not -moz, -webkit, not -o, not -ms, -khtml, official)
+  +experimental('animation-duration',#{$duration}, not -moz, -webkit, not -o, not -ms, -khtml, official)
+  +experimental('animation-timing-function',#{$timing-function}, not -moz, -webkit, not -o, not -ms, -khtml, official)
+  +experimental('animation-delay',#{$delay}, not -moz, -webkit, not -o, not -ms, -khtml, official)
+  +experimental('animation-iteration-count',#{$iteration-count}, not -moz, -webkit, not -o, not -ms, -khtml, official)
+  +experimental('animation-direction',#{$direction}, not -moz, -webkit, not -o, not -ms, -khtml, official)
+
+
+@mixin animations-state($state)
+  +experimental('animation-play-state',#{$state}, not -moz, -webkit, not -o, not -ms, -khtml, official)
+
+//
+@mixin keyframe($animation-name)
+  @-webkit-keyframes #{$animation-name}
+    @content
+  @-moz-keyframes #{$animation-name}
+    @content
+  @-o-keyframes #{$animation-name}
+    @content
+  @keyframes #{$animation-name}
+    @content
+
+
++keyframe(caret)
+  50%
+    +opacity(0.1)
+    +scaleY(.8)
+
+
+
+
+
+
+
+
 .clearfix
   +clearfix
 
@@ -57,6 +102,17 @@ a
           +transition(.5s)
           font-size: 18px
           color: #000
+  span
+    color: #fff
+    display: inline-block
+    position: relative
+    +transition(transform 400ms cubic-bezier(0.08, 0.6, 0.56, 1.4))
+    &.odd
+      +transform(translateY(-15px) rotateX(90deg))
+    &.even
+      +transform(translateY(15px) rotateX(90deg))
+  .caret
+    +animations(caret,400ms,linear,0s,infinite,normal)
 
 .section
   color: #fff

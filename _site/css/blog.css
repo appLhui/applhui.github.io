@@ -63,18 +63,70 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
-/* line 4, ../sass/blog.sass */
+@-webkit-keyframes caret {
+  /* line 38, ../sass/blog.sass */
+  50% {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=10);
+    opacity: 0.1;
+    -webkit-transform: scaleY(0.8);
+    -moz-transform: scaleY(0.8);
+    -ms-transform: scaleY(0.8);
+    -o-transform: scaleY(0.8);
+    transform: scaleY(0.8);
+  }
+}
+
+@-moz-keyframes caret {
+  /* line 38, ../sass/blog.sass */
+  50% {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=10);
+    opacity: 0.1;
+    -webkit-transform: scaleY(0.8);
+    -moz-transform: scaleY(0.8);
+    -ms-transform: scaleY(0.8);
+    -o-transform: scaleY(0.8);
+    transform: scaleY(0.8);
+  }
+}
+
+@-o-keyframes caret {
+  /* line 38, ../sass/blog.sass */
+  50% {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=10);
+    opacity: 0.1;
+    -webkit-transform: scaleY(0.8);
+    -moz-transform: scaleY(0.8);
+    -ms-transform: scaleY(0.8);
+    -o-transform: scaleY(0.8);
+    transform: scaleY(0.8);
+  }
+}
+
+@keyframes caret {
+  /* line 38, ../sass/blog.sass */
+  50% {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=10);
+    opacity: 0.1;
+    -webkit-transform: scaleY(0.8);
+    -moz-transform: scaleY(0.8);
+    -ms-transform: scaleY(0.8);
+    -o-transform: scaleY(0.8);
+    transform: scaleY(0.8);
+  }
+}
+
+/* line 49, ../sass/blog.sass */
 .clearfix {
   overflow: hidden;
   *zoom: 1;
 }
 
-/* line 7, ../sass/blog.sass */
+/* line 52, ../sass/blog.sass */
 a {
   text-decoration: none;
 }
 
-/* line 10, ../sass/blog.sass */
+/* line 55, ../sass/blog.sass */
 #header {
   position: fixed;
   top: 0;
@@ -88,12 +140,12 @@ a {
   padding: 0;
 }
 
-/* line 22, ../sass/blog.sass */
+/* line 67, ../sass/blog.sass */
 #topbar {
   height: 55px;
 }
 
-/* line 26, ../sass/blog.sass */
+/* line 71, ../sass/blog.sass */
 #title {
   height: 80px;
   display: inline-block;
@@ -102,28 +154,28 @@ a {
   padding-left: 20px;
   font-size: 40px;
 }
-/* line 33, ../sass/blog.sass */
+/* line 78, ../sass/blog.sass */
 #title a {
   color: white;
 }
 
-/* line 36, ../sass/blog.sass */
+/* line 81, ../sass/blog.sass */
 #menuDiv {
   height: 80px;
   background: #2d3032;
   border-bottom: 1px solid #444649;
 }
-/* line 40, ../sass/blog.sass */
+/* line 85, ../sass/blog.sass */
 #menuDiv ul {
   width: 400px;
   float: right;
 }
-/* line 43, ../sass/blog.sass */
+/* line 88, ../sass/blog.sass */
 #menuDiv ul li {
   float: right;
   border-left: 1px solid #444649;
 }
-/* line 46, ../sass/blog.sass */
+/* line 91, ../sass/blog.sass */
 #menuDiv ul li a {
   width: 138px;
   height: 80px;
@@ -133,7 +185,7 @@ a {
   font-size: 16px;
   color: white;
 }
-/* line 55, ../sass/blog.sass */
+/* line 100, ../sass/blog.sass */
 #menuDiv ul li:hover a {
   background: #0dcbc0;
   -webkit-transition: 0.5s;
@@ -143,8 +195,49 @@ a {
   font-size: 18px;
   color: black;
 }
+/* line 105, ../sass/blog.sass */
+#menuDiv span {
+  color: white;
+  display: inline-block;
+  position: relative;
+  -webkit-transition: -webkit-transform 400ms cubic-bezier(0.08, 0.6, 0.56, 1.4);
+  -moz-transition: -moz-transform 400ms cubic-bezier(0.08, 0.6, 0.56, 1.4);
+  -o-transition: -o-transform 400ms cubic-bezier(0.08, 0.6, 0.56, 1.4);
+  transition: transform 400ms cubic-bezier(0.08, 0.6, 0.56, 1.4);
+}
+/* line 110, ../sass/blog.sass */
+#menuDiv span.odd {
+  -webkit-transform: translateY(-15px) rotateX(90deg);
+  -moz-transform: translateY(-15px) rotateX(90deg);
+  -ms-transform: translateY(-15px) rotateX(90deg);
+  -o-transform: translateY(-15px) rotateX(90deg);
+  transform: translateY(-15px) rotateX(90deg);
+}
+/* line 112, ../sass/blog.sass */
+#menuDiv span.even {
+  -webkit-transform: translateY(15px) rotateX(90deg);
+  -moz-transform: translateY(15px) rotateX(90deg);
+  -ms-transform: translateY(15px) rotateX(90deg);
+  -o-transform: translateY(15px) rotateX(90deg);
+  transform: translateY(15px) rotateX(90deg);
+}
+/* line 114, ../sass/blog.sass */
+#menuDiv .caret {
+  -webkit-animation-name: caret;
+  animation-name: caret;
+  -webkit-animation-duration: 400ms;
+  animation-duration: 400ms;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-direction: normal;
+  animation-direction: normal;
+}
 
-/* line 61, ../sass/blog.sass */
+/* line 117, ../sass/blog.sass */
 .section {
   color: white;
 }
