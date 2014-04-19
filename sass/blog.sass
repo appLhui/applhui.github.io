@@ -1,0 +1,64 @@
+@import "compass/reset"
+@import "compass"
+
+.clearfix
+  +clearfix
+
+a
+  text-decoration: none
+
+#header
+  position: fixed
+  top: 0
+  height: 135px
+  display: block
+  width: 100%
+  background: #000
+  z-index: 9
+  text-align: center
+  color:  #f2f2f2
+  padding: 0
+
+#topbar
+  height: 55px
+
+
+#title
+  height: 80px
+  display: inline-block
+  float: left
+  line-height: 80px
+  padding-left: 20px
+  font-size: 40px
+  a
+    color: #fff
+
+#menuDiv
+  height: 80px
+  background: #2D3032
+  border-bottom: 1px solid #444649
+  ul
+    width: 400px
+    float: right
+    li
+      float: right
+      border-left: 1px solid #444649
+      a
+        width: 138px
+        height: 80px
+        display: inline-block
+        line-height: 80px
+        font-weight: 500
+        font-size: 16px
+        color: #fff
+      &:hover
+        a
+          background: #0DCBC0
+          +transition(.5s)
+          font-size: 18px
+          color: #000
+
+.section
+  color: #fff
+
+
