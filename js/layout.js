@@ -1,7 +1,38 @@
-/**
- * Created with JetBrains WebStorm.
- * User: lihui
- * Date: 14-4-13
- * Time: 下午4:17
- * To change this template use File | Settings | File Templates.
- */
+
+
+$(document).ready(function() {
+
+
+    $('#fullpage').fullpage({
+        slidesColor: ['#000', '#000', '#000'],
+        anchors: ['firstPage', 'secondPage', '3rdPage'],
+        menu: '#menu',
+
+        'afterLoad': function(anchorLink, index){
+             console.log(anchorLink);
+             console.log(index);
+        },
+
+        'onLeave': function(index, direction){
+            console.log(direction);
+            console.log(index);
+        }
+    });
+
+//    $('#header').mouseenter(function(){
+//            $.each($(this).find('ul>li'),function(i,o){
+//                var _self = this;
+//                setTimeout(function(){
+//                    $(_self).addClass('magictime tinRightIn');
+//            },i*200);
+//        })
+//    });
+//    $('#header').mouseout(function(){
+//            $.each($(this).find('ul>li'),function(i,o){
+//                var _self = this;
+//                setTimeout(function(){
+//                    $(_self).removeClass('magictime tinRightIn');
+//                },i*200);
+//            })
+//    });
+});
