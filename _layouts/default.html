@@ -12,6 +12,7 @@
         <script src="../js/jquery.easings.min.js" type="text/javascript"></script>
         <script src="../js/jquery.slimscroll.min.js" type="text/javascript"></script>
         <script src="../js/jquery.fullPage.min.js" type="text/javascript"></script>
+
         <link rel="stylesheet" href="../css/jquery.fullPage.css">
 
         <!-- syntax highlighting CSS -->
@@ -25,70 +26,63 @@
         <link rel="stylesheet" href="/css/menus.css">
 
 
+        <script>
+            var ADAPT_CONFIG = {
+                path: 'css/layout/',
+                dynamic: true,
+                range: [
+                    '0px    to 760px  = mobile.css',
+                    '760px  to 980px  = 720.css',
+                    '980px  to 1280px = 960.css',
+                    '1280px to 1600px = 1200.css',
+                    '1600px to 1940px = 1560.css',
+                    '1940px to 2540px = 1920.css',
+                    '2540px           = 2520.css'
+                ]
+            };
+        </script>
+
+        <script src="../js/adapt.min.js" type="text/javascript"></script>
+
+
         <script src="../js/layout.js"></script>
 
     </head>
     <body>
 
-    <div id="header">
-        <div id="topbar"></div>
-        <div id="menuDiv">
-            <div id="title">
-                <h1>
-                    <a href="/">{{ site.name }}</a>
-                </h1>
+            <div id="header" >
+                <div id="topbar" ></div>
+                <div id="menuDiv" >
+                    <div id="title">
+                        <h1>
+                            <a href="/">{{ site.name }}</a>
+                        </h1>
+                    </div>
+
+                    <ul id="menu">
+                        <li data-menuanchor="firstPage">
+                            <a href="#firstPage">Angular</a>
+                        </li>
+                        <li data-menuanchor="secondPage">
+                            <a href="#secondPage">Html</a>
+                        </li>
+                    </ul>
+                </div>
+
             </div>
 
-            <ul id="menu">
-                <li data-menuanchor="firstPage">
-                    <a href="#firstPage">Angular</a>
-                </li>
-                <li data-menuanchor="secondPage">
-                    <a href="#secondPage">Html</a>
-                </li>
-            </ul>
-        </div>
 
-    </div>
-
-
-    <div id="fullpage">
-        <div class="section " id="section0">
-            <h1>fullPage.js</h1>
-            <p>Configure the easing jQuery UI effect!</p>
-        </div>
-        <div class="section" id="section1">
-            {{ content }}
-        </div>
-        <div class="section" id="section2">
-            {{ content }}
-        </div>
-    </div>
-
-        <div class="site">
-          <div class="header">
-            <h1 class="title"><a href="/">{{ site.name }}</a></h1>
-            <a class="extra" href="/">home</a>
-          </div>
-
-          {{ content }}
-
-          <div class="footer">
-            <div class="contact">
-              <p>
-                Your Name<br />
-                What You Are<br />
-                you@example.com
-              </p>
+            <div id="fullpage"  class="container_12">
+                <div class="section" id="section0">
+                    {{ content }}
+                </div>
+                <div class="section" id="section1">
+                    {{ content }}
+                </div>
+                <div class="section" id="section2">
+                    {{ content }}
+                </div>
             </div>
-            <div class="contact">
-              <p>
-                <a href="https://github.com/yourusername">github.com/yourusername</a><br />
-                <a href="https://twitter.com/yourusername">twitter.com/yourusername</a><br />
-              </p>
-            </div>
-          </div>
-        </div>
 
     </body>
 </html>
