@@ -63,8 +63,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
+/* line 4, ../sass/blog.sass */
+h1 {
+  font-size: 18px;
+}
+
 @-webkit-keyframes caret {
-  /* line 36, ../sass/blog.sass */
+  /* line 43, ../sass/blog.sass */
   50% {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=10);
     opacity: 0.1;
@@ -77,7 +82,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 @-moz-keyframes caret {
-  /* line 36, ../sass/blog.sass */
+  /* line 43, ../sass/blog.sass */
   50% {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=10);
     opacity: 0.1;
@@ -90,7 +95,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 @-o-keyframes caret {
-  /* line 36, ../sass/blog.sass */
+  /* line 43, ../sass/blog.sass */
   50% {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=10);
     opacity: 0.1;
@@ -103,7 +108,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 @keyframes caret {
-  /* line 36, ../sass/blog.sass */
+  /* line 43, ../sass/blog.sass */
   50% {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=10);
     opacity: 0.1;
@@ -115,18 +120,18 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   }
 }
 
-/* line 47, ../sass/blog.sass */
+/* line 54, ../sass/blog.sass */
 .clearfix {
   overflow: hidden;
   *zoom: 1;
 }
 
-/* line 50, ../sass/blog.sass */
+/* line 57, ../sass/blog.sass */
 a {
   text-decoration: none;
 }
 
-/* line 53, ../sass/blog.sass */
+/* line 60, ../sass/blog.sass */
 #header {
   position: fixed;
   top: 0;
@@ -139,13 +144,13 @@ a {
   padding: 0;
 }
 
-/* line 64, ../sass/blog.sass */
+/* line 71, ../sass/blog.sass */
 #topbar {
   height: 55px;
-  background: white;
+  background: rgba(255, 255, 255, 0.49);
 }
 
-/* line 69, ../sass/blog.sass */
+/* line 76, ../sass/blog.sass */
 #title {
   height: 80px;
   display: inline-block;
@@ -154,22 +159,22 @@ a {
   padding-left: 20px;
   font-size: 40px;
 }
-/* line 76, ../sass/blog.sass */
+/* line 83, ../sass/blog.sass */
 #title a {
   color: white;
 }
 
-/* line 79, ../sass/blog.sass */
+/* line 86, ../sass/blog.sass */
 #menuDiv {
   height: 80px;
   background: rgba(45, 48, 50, 0.49);
 }
-/* line 82, ../sass/blog.sass */
+/* line 89, ../sass/blog.sass */
 #menuDiv ul {
   width: 400px;
   float: right;
 }
-/* line 85, ../sass/blog.sass */
+/* line 92, ../sass/blog.sass */
 #menuDiv ul li {
   float: right;
   border-left: 1px solid white;
@@ -177,28 +182,28 @@ a {
   width: 138px;
   height: 80px;
 }
-/* line 91, ../sass/blog.sass */
+/* line 98, ../sass/blog.sass */
 #menuDiv ul li a {
   display: inline-block;
   line-height: 80px;
   font-size: 16px;
   position: relative;
 }
-/* line 96, ../sass/blog.sass */
+/* line 103, ../sass/blog.sass */
 #menuDiv ul li a span {
   -webkit-transition: all 300ms linear;
   -moz-transition: all 300ms linear;
   -o-transition: all 300ms linear;
   transition: all 300ms linear;
 }
-/* line 99, ../sass/blog.sass */
+/* line 106, ../sass/blog.sass */
 #menuDiv ul li:hover a {
   width: 170px;
   background: #0dcbc0;
   font-size: 25px;
   color: black;
 }
-/* line 104, ../sass/blog.sass */
+/* line 111, ../sass/blog.sass */
 #menuDiv ul li:hover span {
   position: absolute;
   font-size: 100px;
@@ -211,7 +216,7 @@ a {
   -o-transform: rotate(20deg);
   transform: rotate(20deg);
 }
-/* line 113, ../sass/blog.sass */
+/* line 120, ../sass/blog.sass */
 #menuDiv span {
   color: white;
   display: inline-block;
@@ -221,7 +226,7 @@ a {
   -o-transition: -o-transform 400ms cubic-bezier(0.08, 0.6, 0.56, 1.4);
   transition: transform 400ms cubic-bezier(0.08, 0.6, 0.56, 1.4);
 }
-/* line 118, ../sass/blog.sass */
+/* line 125, ../sass/blog.sass */
 #menuDiv span.odd {
   -webkit-transform: translateY(-15px) rotateX(90deg);
   -moz-transform: translateY(-15px) rotateX(90deg);
@@ -229,7 +234,7 @@ a {
   -o-transform: translateY(-15px) rotateX(90deg);
   transform: translateY(-15px) rotateX(90deg);
 }
-/* line 120, ../sass/blog.sass */
+/* line 127, ../sass/blog.sass */
 #menuDiv span.even {
   -webkit-transform: translateY(15px) rotateX(90deg);
   -moz-transform: translateY(15px) rotateX(90deg);
@@ -237,7 +242,7 @@ a {
   -o-transform: translateY(15px) rotateX(90deg);
   transform: translateY(15px) rotateX(90deg);
 }
-/* line 122, ../sass/blog.sass */
+/* line 129, ../sass/blog.sass */
 #menuDiv .caret {
   -webkit-animation-name: caret;
   animation-name: caret;
@@ -253,7 +258,59 @@ a {
   animation-direction: normal;
 }
 
-/* line 125, ../sass/blog.sass */
+/* line 132, ../sass/blog.sass */
 .section {
   padding-top: 40px;
+}
+/* line 133, ../sass/blog.sass */
+.section h1 {
+  margin: 10px 0;
+}
+/* line 135, ../sass/blog.sass */
+.section p {
+  color: #818b92;
+  font-weight: 300;
+  line-height: 20px;
+}
+/* line 141, ../sass/blog.sass */
+.section .leftInStart {
+  position: relative;
+  left: -200%;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+  opacity: 0.5;
+  -webkit-transition-duration: 800ms;
+  -moz-transition-duration: 800ms;
+  -o-transition-duration: 800ms;
+  transition-duration: 800ms;
+}
+/* line 146, ../sass/blog.sass */
+.section .leftInEnd {
+  left: 0;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+  -webkit-transition-duration: 800ms;
+  -moz-transition-duration: 800ms;
+  -o-transition-duration: 800ms;
+  transition-duration: 800ms;
+}
+/* line 151, ../sass/blog.sass */
+.section .rightInStart {
+  position: relative;
+  right: -200%;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+  opacity: 0.5;
+  -webkit-transition-duration: 800ms;
+  -moz-transition-duration: 800ms;
+  -o-transition-duration: 800ms;
+  transition-duration: 800ms;
+}
+/* line 156, ../sass/blog.sass */
+.section .rightInEnd {
+  right: 0;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+  -webkit-transition-duration: 800ms;
+  -moz-transition-duration: 800ms;
+  -o-transition-duration: 800ms;
+  transition-duration: 800ms;
 }

@@ -1,6 +1,13 @@
 @import "compass/reset"
 @import "compass"
 
+h1
+  font-size: 18px
+
+
+
+
+
 //animation-name 规定需要绑定到选择器的 keyframe 名称。。
   animation-duration 规定完成动画所花费的时间，以秒或毫秒计。
   animation-timing-function 规定动画的速度曲线。
@@ -63,7 +70,7 @@ a
 
 #topbar
   height: 55px
-  background: #fff
+  background: rgba(255, 255, 255, 0.49)
 
 
 #title
@@ -123,6 +130,34 @@ a
     +animations(caret,400ms,linear,0s,infinite,normal)
 
 .section
+  h1
+    margin: 10px 0
+  p
+    color: #818B92
+    font-weight: 300
+    line-height: 20px
+
   padding-top: 40px
+  .leftInStart
+    position: relative
+    left: -200%
+    +opacity(.5)
+    +transition-duration(800ms)
+  .leftInEnd
+    left: 0
+    +opacity(1)
+    +transition-duration(800ms)
+
+  .rightInStart
+    position: relative
+    right: -200%
+    +opacity(.5)
+    +transition-duration(800ms)
+  .rightInEnd
+    right: 0
+    +opacity(1)
+    +transition-duration(800ms)
+
+
 
 

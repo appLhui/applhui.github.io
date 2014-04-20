@@ -10,7 +10,15 @@ $(document).ready(function() {
         menu: '#menu',
 
         'afterLoad': function(anchorLink, index){
-            var title = anchorLink+'我爱北京天安门'.split('');
+            $.each(timer,function(i,o){
+                clearTimeout(o);
+                if(i==timer.length-1){
+                    timer.length = 0;
+                }
+            });
+
+            //打印标题
+            var title = anchorLink+'我爱北京动物园'.split('');
             var _html = ''
             $('#header h1 ').html('<b class="caret">_</b>');
             $.each(title,function(i,o){
@@ -30,9 +38,16 @@ $(document).ready(function() {
                         },1000));
                     }
                 },390*i ));
-
             });
-
+            //照片进场效果
+            if(index==1){
+                $('img').addClass('leftInEnd');
+                $.each($('li'),function(i,o){
+                    timer.push(setTimeout(function(){
+                        $(o).addClass('rightInEnd');
+                    },i*50));
+                });
+            }
         },
 
         'onLeave': function(index, direction){
@@ -44,23 +59,16 @@ $(document).ready(function() {
             });
 
             $('#header h1 span').remove();
+
+            if(index==1){
+                $('img').removeClass('leftInEnd');
+                $.each($('li'),function(i,o){
+                    timer.push(setTimeout(function(){
+                        $(o).removeClass('rightInEnd');
+                    },i*50));
+                });
+            }
         }
     });
 
-//    $('#header').mouseenter(function(){
-//            $.each($(this).find('ul>li'),function(i,o){
-//                var _self = this;
-//                setTimeout(function(){
-//                    $(_self).addClass('magictime tinRightIn');
-//            },i*200);
-//        })
-//    });
-//    $('#header').mouseout(function(){
-//            $.each($(this).find('ul>li'),function(i,o){
-//                var _self = this;
-//                setTimeout(function(){
-//                    $(_self).removeClass('magictime tinRightIn');
-//                },i*200);
-//            })
-//    });
 });
