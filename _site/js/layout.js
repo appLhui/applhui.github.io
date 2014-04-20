@@ -2,10 +2,10 @@
 
 $(document).ready(function() {
 
-//    var title = ['墨','斐','的','博','客'];
+    var timer=[];
 
     $('#fullpage').fullpage({
-        slidesColor: ['#000', '#000', '#000'],
+        slidesColor: ['#fff', '#fff', '#fff'],
         anchors: ['Html','Angular'],
         menu: '#menu',
 
@@ -14,32 +14,36 @@ $(document).ready(function() {
             var _html = ''
             $('#header h1 ').html('<b class="caret">_</b>');
             $.each(title,function(i,o){
-                setTimeout(function(){
+                timer.push(setTimeout(function(){
                     if(i%2){
                         _html='<span class="odd title_'+i+'">'+ o +'</span>';
                     }else{
                         _html='<span class="even title_'+i+'">'+ o +'</span>';
                     }
                     $('#header .caret').before(_html);
-                    setTimeout(function(){
+                    timer.push(setTimeout(function(){
                         $('#header .title_'+i).removeClass('even').removeClass('odd');
-                    },10*i);
+                    },10*i));
                     if(i==title.length-1){
-                        setTimeout(function(){
+                        timer.push(setTimeout(function(){
                             $('#header h1 b').remove();
-                        },1000);
+                        },1000));
                     }
-                },390*i );
+                },390*i ));
 
             });
 
         },
 
         'onLeave': function(index, direction){
+            $.each(timer,function(i,o){
+                clearTimeout(o);
+                if(i==timer.length-1){
+                    timer.length = 0;
+                }
+            });
 
             $('#header h1 span').remove();
-            console.log(direction);
-            console.log(index);
         }
     });
 
