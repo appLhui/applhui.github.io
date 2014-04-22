@@ -262,17 +262,24 @@ a {
 .section {
   padding-top: 40px;
 }
-/* line 133, ../sass/blog.sass */
+/* line 134, ../sass/blog.sass */
 .section h1 {
   margin: 10px 0;
 }
-/* line 135, ../sass/blog.sass */
+/* line 136, ../sass/blog.sass */
 .section p {
   color: #818b92;
   font-weight: 300;
   line-height: 20px;
 }
-/* line 141, ../sass/blog.sass */
+/* line 140, ../sass/blog.sass */
+.section li {
+  background: rgba(255, 255, 255, 0.9);
+  filter: blur(10px);
+  margin-top: 20px;
+  padding: 25px;
+}
+/* line 145, ../sass/blog.sass */
 .section .leftInStart {
   position: relative;
   left: -200%;
@@ -283,7 +290,7 @@ a {
   -o-transition-duration: 800ms;
   transition-duration: 800ms;
 }
-/* line 146, ../sass/blog.sass */
+/* line 150, ../sass/blog.sass */
 .section .leftInEnd {
   left: 0;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
@@ -293,7 +300,7 @@ a {
   -o-transition-duration: 800ms;
   transition-duration: 800ms;
 }
-/* line 151, ../sass/blog.sass */
+/* line 155, ../sass/blog.sass */
 .section .rightInStart {
   position: relative;
   right: -200%;
@@ -304,7 +311,7 @@ a {
   -o-transition-duration: 800ms;
   transition-duration: 800ms;
 }
-/* line 156, ../sass/blog.sass */
+/* line 160, ../sass/blog.sass */
 .section .rightInEnd {
   right: 0;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);

@@ -5,7 +5,7 @@ $(document).ready(function() {
     var timer=[];
 
     $('#fullpage').fullpage({
-        slidesColor: ['#fff', '#fff', '#fff'],
+        slidesColor: ['rgba(255, 255, 255, 0.6)', 'rgba(255, 255, 255, 0)'],
         anchors: ['Html','Angular'],
         menu: '#menu',
 
